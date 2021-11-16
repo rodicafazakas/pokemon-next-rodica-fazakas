@@ -1,9 +1,16 @@
+import Link from "next/link";
 
 const PokemonsSSR = ({pokemons}) => {
   return (
     <>
+      <h1> My Pokemons SSR </h1>
       <ul>
-        {pokemons.map( pokemon => (<li key={pokemon.name}> {pokemon.name} </li>))}        
+        {pokemons.map( pokemon => (
+          <Link key={pokemon.name} href={`/pokemonsSSR/${pokemon.id}`} passHref>
+            <li> {pokemon.name} </li>
+          </Link>
+          )
+        )}        
       </ul>
     </>
   )
