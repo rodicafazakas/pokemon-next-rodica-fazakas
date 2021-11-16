@@ -9,13 +9,13 @@ const Pokemons = () => {
   () =>  
     (async () => {
       const response = await fetch("https://pokeapi.co/api/v2/pokemon?limit=10&offset=0");
-      const pokemons = await response.json();
-      setPokemons(pokemons);
+      let pokemons = await response.json();
+      setPokemons(pokemons.results);
     })(), 
-    []
+    [setPokemons]
   );
 
-
+ 
   return (
     <main>
      <h1> First 10 pokemons from PokeAPI </h1>
