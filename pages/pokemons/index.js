@@ -22,7 +22,7 @@ const Pokemons = () => {
      <ul> 
       {pokemons.map( (pokemon) => (
         // <Pokemon key={pokemon.name} pokemons={pokemon} />
-        <li> {pokemon.name} </li>  
+        <li key={pokemon.name}> {pokemon.name} </li>  
       ))}
      </ul>
     </main> 

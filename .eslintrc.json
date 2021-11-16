@@ -1,9 +1,5 @@
 {
-  "extends": [
-    "next/core-web-vitals",
-    "eslint-config-airbnb",
-    "prettier"
-  ],
+  "extends": "next/core-web-vitals",
   "rules": {
     "no-param-reassign": "off",
     "no-plusplus": "off",
